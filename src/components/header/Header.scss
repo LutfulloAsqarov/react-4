@@ -1,0 +1,83 @@
+#header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #000;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 20px 0;
+    gap: 30px;
+    z-index: 9;
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+    &__icons {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+        a {
+            position: relative;
+        }
+        sup {
+            position: absolute;
+            top: -5px;
+            right: -4px;
+            padding: 2px 4px 1px;
+            background: skyblue;
+            border-radius: 100%;
+            font-size: 10px;
+        }
+    }
+
+    &__bar {
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;
+    }
+    .show {
+        left: 0;
+    }
+
+    @media (max-width: 920px) {
+        &__list {
+            position: absolute;
+            left: -30%;
+            top: 0;
+            flex-direction: column;
+            background: #000;
+            height: 100vh;
+            width: 30%;
+            align-items: center;
+            justify-content: center;
+            transition: 0.4s;
+            z-index: 99;
+        }
+        &__bar {
+            display: block;
+        }
+    }
+    @media (max-width: 600px) {
+        &__list {
+            width: 50%;
+            left: -50%;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0005;
+}

@@ -1,0 +1,35 @@
+.about {
+    &__cards {
+        display: flex;
+        gap: 50px;
+        padding: 50px 0;
+    }
+    &__card {
+        background: #f5f5f5;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        border-radius: 20px;
+        &__desc {
+            padding: 10px 0;
+            color: #8b8e99;
+        }
+    }
+    @media (max-width: 1000px) {
+        &__cards {
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 450px) {
+        &__card {
+            flex-direction: column;
+        }
+        .title {
+            font-size: 24px;
+        }
+        .subtitle {
+            font-size: 12px;
+        }
+    }
+}
